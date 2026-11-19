@@ -13,7 +13,7 @@ _site/
 .jekyll-metadata
 .sass-cache/
 .bundle/
-vendor/
+/vendor/
 
 # Node dependencies and generated JavaScript
 node_modules/
@@ -22,9 +22,9 @@ __pycache__/
 *.pyc
 
 # Local previews, scratch files, and credentials
-tmp/
-output/
-preview/
+/tmp/
+/output/
+/preview/
 .env
 .env.*
 !.env.example
