@@ -1,0 +1,11 @@
+{
+  "name": "tuan-anh-nguyen-academic-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Academic portfolio built with Academic Pages",
+  "scripts": {
+    "build": "node scripts/build-js.mjs",
+    "build:js": "node scripts/build-js.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

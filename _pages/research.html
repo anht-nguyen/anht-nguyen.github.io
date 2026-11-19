@@ -1,0 +1,21 @@
+---
+title: Research
+permalink: /research/
+excerpt: "EEG biomarkers, adaptive neural decoding, robot-mediated feedback, and human-centered rehabilitation technology."
+---
+<p class="academic-lead">From measuring motor engagement to designing interfaces that respond to it.</p>
+<p>My research connects neural measurement, computational modeling, and rehabilitation robotics. I investigate how EEG reflects observed and imagined movement, how decoding models behave across individuals, and how robotic interfaces can support usable rehabilitation interactions.</p>
+<div class="academic-project-grid">
+{% assign projects = site.portfolio | sort: 'order' %}
+{% for project in projects %}
+  <article class="academic-project-card">
+    <p class="academic-eyebrow">{{ project.kicker }}</p>
+    <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+    <p>{{ project.summary }}</p>
+    <a href="{{ project.url | relative_url }}">Project overview →</a>
+  </article>
+{% endfor %}
+</div>
+<h2>Earlier work: wearable robotics</h2>
+<p>My earlier work investigated direct collocation-based optimal control for multimodal lower-limb assistance in simulation, with Vincent Bonnet and Samer Mohammed. This work connects my interests in movement assistance with control and optimization.</p>
+<p><a href="{{ '/publications/2022-assistive-control/' | relative_url }}">Read about the wearable robotics study →</a></p>

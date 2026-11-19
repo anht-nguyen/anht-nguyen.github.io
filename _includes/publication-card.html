@@ -1,0 +1,15 @@
+{% assign pub = include.publication %}
+<article class="academic-publication">
+  <p class="academic-publication-meta">{{ pub.year }} · {{ pub.status }}</p>
+  <h3><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></h3>
+  <p class="academic-authors">{{ pub.authors }}</p>
+  <p><em>{{ pub.venue }}</em>{% if pub.details %}, {{ pub.details }}{% endif %}.</p>
+  {% if pub.contribution %}<p class="academic-contribution">{{ pub.contribution }}</p>{% endif %}
+  <p>{{ pub.summary }}</p>
+  <div class="academic-paper-links">
+    {% if pub.external_url %}<a href="{{ pub.external_url }}">{{ pub.external_label | default: 'Publisher' }}</a>{% endif %}
+    {% if pub.pdf_path %}<a href="{{ pub.pdf_path | relative_url }}">Paper (PDF)</a>{% endif %}
+    {% if pub.poster_path %}<a href="{{ pub.poster_path | relative_url }}">Poster (PDF)</a>{% endif %}
+    <a href="{{ pub.url | relative_url }}">Research summary</a>
+  </div>
+</article>

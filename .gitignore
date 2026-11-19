@@ -1,0 +1,34 @@
+# Local assistant, agent, and editor state
+.serena/
+.codex/
+.claude/
+.agents/
+.cursor/
+.vscode/
+.idea/
+
+# Jekyll and Bundler output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
+
+# Node dependencies and generated JavaScript
+node_modules/
+assets/js/site.js
+__pycache__/
+*.pyc
+
+# Local previews, scratch files, and credentials
+tmp/
+output/
+preview/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini

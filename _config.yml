@@ -1,0 +1,116 @@
+locale: en-US
+site_theme: default
+title: Tuan Anh Nguyen
+title_separator: "|"
+name: Tuan Anh Nguyen
+description: "Bioengineering Ph.D. candidate at the University of Pennsylvania working on EEG, brain-computer interfaces, and rehabilitation robotics."
+url: https://anht-nguyen.github.io
+baseurl: ""
+repository: anht-nguyen/anht-nguyen.github.io
+author:
+  avatar: monogram.svg
+  name: Tuan Anh Nguyen
+  bio: "Ph.D. candidate in Bioengineering. EEG, brain-computer interfaces, and rehabilitation robotics."
+  location: Philadelphia, PA
+  employer: University of Pennsylvania
+  uri: https://www.med.upenn.edu/rehabilitation-robotics-lab/
+  email: tuna28ng@seas.upenn.edu
+  googlescholar: https://scholar.google.com/citations?user=h4WhMVsAAAAJ&hl=en
+  github: anht-nguyen
+publication_category:
+  journals:
+    title: Journal articles
+  conferences:
+    title: Conference proceedings & book chapters
+  preprints:
+    title: Preprints
+breadcrumbs: false
+words_per_minute: 160
+future: true
+read_more: disabled
+comments:
+  provider: false
+atom_feed:
+  hide: true
+analytics:
+  provider: false
+og_image: monogram.svg
+og_description: "EEG, brain-computer interfaces, and rehabilitation robotics at the University of Pennsylvania."
+social:
+  type: Person
+  name: Tuan Anh Nguyen
+  links:
+    - https://github.com/anht-nguyen
+    - https://scholar.google.com/citations?user=h4WhMVsAAAAJ&hl=en
+include:
+  - _pages
+  - files
+exclude:
+  - .github
+  - .serena
+  - .codex
+  - .claude
+  - .agents
+  - .cursor
+  - .vscode
+  - .idea
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - TEMPLATE.md
+  - scripts
+  - node_modules
+  - package.json
+  - package-lock.json
+  - vendor
+  - tmp
+  - output
+  - preview
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+  portfolio:
+    output: true
+    permalink: /research/:path/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: /:categories/:title/
+timezone: America/New_York
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  ignore:
+    envs: development

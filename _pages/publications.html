@@ -1,0 +1,29 @@
+---
+title: Publications
+permalink: /publications/
+excerpt: "Journal articles, conference proceedings, book chapters, and preprints by Anh T. Nguyen."
+---
+<p>I publish as <strong>Anh T. Nguyen</strong>. My work is also indexed on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
+<p>Preprints are listed separately from published journal articles and proceedings. Equal-contribution roles are noted where applicable.</p>
+<nav class="academic-section-nav" aria-label="Publication categories">
+{% for category in site.publication_category %}
+  <a href="#{{ category[0] }}">{{ category[1].title }}</a>
+{% endfor %}
+</nav>
+{% assign publications = site.publications | sort: 'year' | reverse %}
+{% for category in site.publication_category %}
+  <h2 id="{{ category[0] }}">{{ category[1].title }}</h2>
+  {% for publication in publications %}
+    {% if publication.category == category[0] %}
+      {% include publication-card.html publication=publication %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+<h2>Conference abstracts & presentations</h2>
+<ul>
+  <li><strong>Robust EEG Functional Connectivity Metrics for Decoding Action Observation Conditions and Observed Actions.</strong> A. T. Nguyen, Z. Rentala, and M. J. Johnson. <em>Circulation</em>, 152(Suppl_3), A4373687, 2025. Conference abstract.</li>
+  <li><strong>Exploratory comparison of human sensorimotor event-related desynchronization responses during observations and imitations of actions performed by humans and robots.</strong> A. T. Nguyen, A. Anand, and M. J. Johnson. BMES Annual Meeting, Baltimore, 2024.</li>
+  <li><strong>Integration of a gripper-equipped humanoid social robot for EEG-monitored action-observation experiments in stroke neurorehabilitation research.</strong> A. T. Nguyen, T. Tan, H. Zhang, and M. J. Johnson. Northeast Robotics Colloquium, University of Massachusetts Amherst, 2024.</li>
+</ul>
+<h2>Poster</h2>
+<p><a href="{{ '/assets/2024-biorob-flo-poster.pdf' | relative_url }}">BioRob 2024 poster (PDF)</a> — EEG responses during observation of human and humanoid robot actions.</p>

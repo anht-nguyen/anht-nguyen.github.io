@@ -1,0 +1,14 @@
+---
+layout: single
+---
+<p class="academic-publication-meta">{{ page.year }} · {{ page.status }}</p>
+<p><strong>{{ page.authors }}</strong></p>
+<p><em>{{ page.venue }}</em>{% if page.details %}, {{ page.details }}{% endif %}.</p>
+{% if page.contribution %}<p class="academic-contribution">{{ page.contribution }}</p>{% endif %}
+<div class="academic-paper-links">
+{% if page.external_url %}<a href="{{ page.external_url }}">{{ page.external_label | default: 'Publisher record' }}</a>{% endif %}
+{% if page.pdf_path %}<a href="{{ page.pdf_path | relative_url }}">Paper (PDF)</a>{% endif %}
+{% if page.poster_path %}<a href="{{ page.poster_path | relative_url }}">Poster (PDF)</a>{% endif %}
+</div>
+{{ content }}
+<p><a href="{{ '/publications/' | relative_url }}">← All publications</a></p>

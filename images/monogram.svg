@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Tuan Anh Nguyen</title>
+  <desc id="desc">AN initials on a navy background with a stylized signal trace.</desc>
+  <rect width="240" height="240" rx="120" fill="#123047"/>
+  <path d="M22 155h37l12-21 15 44 19-67 19 44h26l10-16 11 16h47" fill="none" stroke="#68c4b8" stroke-width="3" opacity=".8"/>
+  <text x="120" y="115" text-anchor="middle" fill="#fff" font-size="66" font-family="Georgia,serif" letter-spacing="4">AN</text>
+</svg>

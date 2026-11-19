@@ -1,52 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Research</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
-    header, section {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1, h2 {
-      color: #333;
-    }
-    a {
-      color: #1a0dab;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>My Research on Stroke Neurorehabilitation and Rehab Robotics</h1>
-  </header>
-  <main>
-    <section>
-      <h2>Research Papers</h2>
-      <ul>
-        <li>BioRob 2024: <a href="assets/BIRO24_0379_FI.pdf" target="_blank">Download Full Paper (PDF)</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Posters</h2>
-      <ul>
-        <li>BioRob 2024: <a href="assets/2024-biorob-flo-poster.pdf" target="_blank">View Poster (PDF)</a></li>
-      </ul>
-    </section>
-  </main>
-</body>
-</html>
+---
+layout: single
+title: "Engineering interfaces for movement and recovery"
+excerpt: "Tuan Anh Nguyen studies EEG, brain-computer interfaces, and rehabilitation robotics at the University of Pennsylvania."
+---
+<p class="academic-eyebrow">Bioengineering · University of Pennsylvania</p>
+<p class="academic-lead">I study how brain activity can inform more personalized rehabilitation and human–robot interaction.</p>
+
+<p>I am a Ph.D. candidate in Bioengineering at the University of Pennsylvania, advised by <strong>Dr. Michelle J. Johnson</strong> in the <a href="https://www.med.upenn.edu/rehabilitation-robotics-lab/">Rehabilitation Robotics Lab</a>. My research combines electroencephalography (EEG), machine learning, and robotic systems to investigate motor engagement and feedback for stroke rehabilitation.</p>
+
+<p>My work spans EEG responses during action observation, adaptation of EEG foundation models for motor imagery decoding, and the design and evaluation of robot-mediated rehabilitation interfaces. I publish under the name <strong>Anh T. Nguyen</strong>.</p>
+
+<div class="academic-actions">
+  <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Explore my research</a>
+  <a class="btn btn--inverse" href="{{ '/files/Tuan-Anh-Nguyen-CV.pdf' | relative_url }}">Download CV <span class="academic-filetype">(PDF)</span></a>
+</div>
+
+<h2>Research directions</h2>
+<div class="academic-project-grid">
+{% assign projects = site.portfolio | sort: 'order' %}
+{% for project in projects %}
+  <article class="academic-project-card">
+    <p class="academic-eyebrow">{{ project.kicker }}</p>
+    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+    <p>{{ project.summary }}</p>
+  </article>
+{% endfor %}
+</div>
+
+<h2>Selected publications</h2>
+{% assign selected = site.publications | where: 'featured', true | sort: 'year' | reverse %}
+{% for publication in selected %}
+  {% include publication-card.html publication=publication %}
+{% endfor %}
+<p><a href="{{ '/publications/' | relative_url }}">View all publications and preprints →</a></p>
+
+<h2>Academic highlights</h2>
+<ul class="academic-highlights">
+  <li><strong>American Heart Association Predoctoral Fellowship</strong> — awarded in 2025.</li>
+  <li><strong>M.S.E. in Bioengineering</strong> — University of Pennsylvania, December 2024.</li>
+  <li><strong>Teaching Assistant, BE5700 Biomechatronics</strong> — Fall 2025 and Fall 2026.</li>
+</ul>
+
+<h2>Connect</h2>
+<p>I welcome conversations about neural interfaces, rehabilitation robotics, and EEG methods. Reach me at <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>, or find my work on <a href="{{ site.author.googlescholar }}">Google Scholar</a> and <a href="https://github.com/{{ site.author.github }}">GitHub</a>.</p>

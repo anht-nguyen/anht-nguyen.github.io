@@ -1,0 +1,13 @@
+---
+title: Sitemap
+permalink: /sitemap/
+---
+<h2>Pages</h2>
+<ul>
+  <li><a href="{{ '/' | relative_url }}">About</a></li>
+  {% for item in site.data.navigation.main %}<li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>{% endfor %}
+</ul>
+<h2>Research projects</h2>
+<ul>{% assign projects = site.portfolio | sort: 'order' %}{% for project in projects %}<li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>{% endfor %}</ul>
+<h2>Publications</h2>
+<ul>{% assign publications = site.publications | sort: 'year' | reverse %}{% for publication in publications %}<li><a href="{{ publication.url | relative_url }}">{{ publication.title }}</a></li>{% endfor %}</ul>
